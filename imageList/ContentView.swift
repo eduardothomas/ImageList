@@ -7,18 +7,7 @@
 
 import SwiftUI
 
-//struct PicsumPhoto: Identifiable, Decodable {
-//    var id: String
-//    var author: String
-//    var width: UInt16
-//    var height: UInt16
-//    var url: URL
-//    var download_url: URL
-//}
-
 struct ContentView: View {
-//    @State var images: [PicsumPhoto] = []
-    
     @State var images: [AsyncImage<Image>] = []
     let baseURL = URL(string: "https://picsum.photos/450")!
     
@@ -51,17 +40,6 @@ struct ContentView: View {
         }
         return images
     }
-    
-    //    func getImages() async throws -> [PicsumPhoto] {
-    //        let request = URLRequest(url: URL(string: "https://picsum.photos/v2/list")!)
-    //        let (data, response) = try await URLSession.shared.data(for: request)
-    //
-    //        guard(response as? HTTPURLResponse)?.statusCode == 200 else { fatalError("Error while fetching data") }
-    //
-    //        let decodedImages = try JSONDecoder().decode([PicsumPhoto].self, from: data)
-    //
-    //        return decodedImages
-    //    }
 }
 
 struct ContentView_Previews: PreviewProvider {
